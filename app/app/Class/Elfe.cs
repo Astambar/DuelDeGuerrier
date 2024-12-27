@@ -12,9 +12,9 @@ namespace app.Class
         private object _focus;
         public string _name;
 
-        public object Focus { get; set; }
+        public Guerrier Focus { get; set; }
 
-        public Elfe(string name, int lifePoints, int attackDice, object focus)
+        public Elfe(string name, int lifePoints, int attackDice, Guerrier focus)
             : base(name, lifePoints, attackDice)
         {
             Focus = focus;
@@ -31,7 +31,7 @@ namespace app.Class
                     rollOfDice = 2;
                 }
             }
-            return rollOfDice;
+            return rollOfDice + (Focus.GetLifePoints()/3);
 
         }
     }
