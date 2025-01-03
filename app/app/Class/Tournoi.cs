@@ -28,20 +28,36 @@ namespace app.Class
         {
             _warriorStillInTheFight = _participants;
             int counterWarior;
+            Duel fight;
             do
             {
+                // Gestion du participant impaire
+                // Faire affronter le moins bon dans ce cas avec le meilleur
                 counterWarior = _warriorStillInTheFight.Count();
                 if ( counterWarior <= 1)
                 {
                     if (counterWarior % 2 != 0)
                     {
-                        counterWarior--;
-
-                    }
-                    for (int i=0; i < counterWarior; i += 2)
+                    for (int i=0; i <= counterWarior; i += 2)
                     {
+                            if (i + 1 == counterWarior)
+                            {
+                                fight = new Duel(new Tuple<Guerrier, Guerrier>(_warriorStillInTheFight[0], _warriorStillInTheFight[i + 1]),5);
+                                fight.StartDuel();
+                                
+                            }
 
                     }
+
+                    }
+                    else
+                    {
+                        for (int i = 0; i < counterWarior; i += 2)
+                        {
+
+                        }
+                    }
+
 
                 }
                 else

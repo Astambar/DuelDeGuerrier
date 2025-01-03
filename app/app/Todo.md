@@ -3,4 +3,5 @@
 - Narrateur foireux
 - Bot (Légit, Tricheur)
 - Parade si dégat inférieur au  bouclier  récupérer de la vie
+- Phénix  & Dot (dégat brulure)
 # 
